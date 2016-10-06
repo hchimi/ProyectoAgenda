@@ -1,0 +1,49 @@
+
+									<!-- CONTACT HTML-->
+
+									<!-- CONTACT HTML-->
+<div class="viewHeader">
+	<h1>Contact</h1>
+	<a class="btn_list btn_title" title="Go to contact list" ng-click="goList()">
+		<i class="fa fa-list fa-2x" aria-hidden="true"></i>
+	</a>
+</div>
+
+<form id="form_contact" name="form_contact" ng-cloak>
+	
+	<div class="form_group">
+		<input type="text" placeholder="First Name" name="firstName" maxlenght="36" ng-model="contact.firstName" required>
+		<p ng-show="form_contact.firstName.$error.required && form_contact.firstName.$touched" class="block_error">The First Name is required</p>
+	</div>
+	<div class="form_group">
+		<input type="text" placeholder="Last Name" name="lastName" maxlenght="36" ng-model="contact.lastName" required>
+		<p ng-show="form_contact.lastName.$error.required && form_contact.lastName.$touched" class="block_error">The Last Name is required</p>
+	</div>
+	<div class="form_group">
+		<input type="email" placeholder="Email" name="email" ng-model="contact.email" required>
+		<p ng-show="form_contact.email.$error.required && form_contact.email.$touched" class="block_error">The Email is required</p>
+		<p ng-show="form_contact.email.$error.email && form_contact.email.$touched" class="block_error">Enter correct Email</p>
+	</div>
+	<div class="style-selected">
+		<select name="country" ng-model="contact.country" required>
+            <option value="" disabled selected>Select the country</option>
+            <option ng-repeat="code in countries.getCodes()" value="{{code}}">{{countries.getName(code)}}</option>
+        </select>
+	</div>
+	<p ng-show="form_contact.country.$error.required && form_contact.country.$touched" class="block_error">The country is required</p>
+
+	<div class="buttonBar">
+		<button name="btn_add" ng-click="add()" ng-show="new && form_contact.$valid" title="Save New Contact">add
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>
+		</button>
+
+		<button name="btn_edit" ng-click="update()" ng-show="!new && form_contact.$valid" title="Update Contact">edit
+			<i class="fa fa-pencil" aria-hidden="true"></i>
+		</button>
+
+		<button name="btn_delete" ng-click="delete()" ng-show="!new" title="Delete Contact">delete
+			<i class="fa fa-trash" aria-hidden="true"></i>
+		</button>	
+	</div>
+
+</form>

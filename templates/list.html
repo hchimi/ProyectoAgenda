@@ -1,0 +1,40 @@
+
+									<!-- LIST HTML-->
+
+									<!-- LIST HTML-->
+
+<div class="viewHeader">
+	<h1>Lista de contactos</h1>
+	<a ng-click="goForm('add')" class="btn_plus btn_title" title="Create new contact">
+		<i class="fa fa-plus-square fa-2x" aria-hidden="true"></i>
+	</a>
+</div>
+
+<!-- Listado de contactos -->
+<div class="listWrapper">
+	<ul>
+		<li ng-repeat="contact in contacts" list_ready_directive="layoutDone()">
+			<div class="contactData">
+				<article>{{contact.firstName}} {{contact.lastName}} /   {{contact.country}}</article>
+			</div>
+			<div class="contactEmail">
+				<a title="Edit contact">
+					<i ng-click="goForm(contact.id)" class="fa fa-pencil fa-2x btn_edit" aria-hidden="true"></i>
+				</a>
+
+				<a href="https://mail.google.com/mail/?view=cm&fs=1&to={{contact.email}}" title="Send email to contact">
+					<i class="fa fa-envelope-o fa-2x btn_email" aria-hidden="true"></i>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div class="buttonBar scroll_bar">
+	<a class="btn_down" title="Scroll down">
+		<i class="fa fa-chevron-circle-down fa-2x" aria-hidden="true"></i>
+	</a>
+	<a class="btn_up" title="Scroll Up">
+		<i class="fa fa-chevron-circle-up fa-2x" aria-hidden="true"></i>
+	</a>
+</div>

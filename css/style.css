@@ -1,0 +1,230 @@
+							
+
+
+							/* Elementos de HTML */
+							/* --------------------*/
+
+html,body
+{
+
+}
+body
+{
+	font-family: 'Roboto', sans-serif;
+}
+
+h1
+{
+	padding-left: 20px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+li
+{
+	list-style: none;
+}
+
+a
+{
+	color: #fb7d29;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover
+{
+	color: #d4482f;
+}
+
+html.listController #view-container
+{
+
+}
+
+html.contactController #view-container
+{
+	height: 50vh;
+}
+
+
+
+
+
+									/* IDS */
+							/* --------------------*/
+
+#view-container
+{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 4px;
+	width: 400px;
+	height: 80vh;
+	text-align: center;
+	padding: 20px;
+	-webkit-box-shadow: 6px 6px 9px 0px rgba(0,0,0,0.45);
+	box-shadow: 6px 6px 9px 0px rgba(0,0,0,0.45);
+
+}
+
+#view-container li
+{
+	background-color: #fff4ea;
+	border-radius: 6px;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: left;
+	overflow: auto;
+	box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.45);
+	-webkit-box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.45);
+}
+
+
+
+#form_contact input
+{
+	border: 1px solid #cccccc;
+	border-radius: 6px;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 4px 10px;
+    width: 100%;
+}
+
+
+#form_contact button
+{
+	background-color: #ffffff;
+	border: 1px solid #fb7d29;
+	border-radius: 6px;
+	font-size: 20px;
+	margin: 0 10px;
+	color: #fb7d29;
+	cursor: pointer;
+}
+
+#form_contact button:hover
+{
+	border: 1px solid #d4482f;
+	color:#d4482f;
+}
+
+#form_contact button i
+{
+	font-size: 1.5em;
+	margin: 0 0 0 10px;
+}
+
+
+									/* CLASES */
+							/* --------------------*/
+
+.viewHeader
+{
+
+}
+
+.buttonBar
+{
+	bottom: 20px;
+	position: absolute;
+	width: 400px;
+}
+
+.btn_title
+{
+	float: right;
+	line-height: 56px;
+	padding-right: 20px;
+}
+
+
+
+.viewHeader
+{
+	overflow: auto;
+}
+
+.viewHeader h1
+{
+	float: left;
+}
+
+.listWrapper
+{
+	height: 55vh;
+	overflow: hidden;
+}
+
+
+.contactData
+{
+	float: left;
+	padding-top: 6px;
+	max-width: 75%;
+}
+
+.contactEmail
+{
+	float: right;
+}
+
+.btn_edit
+{
+	margin-right: 10px;
+}
+
+.scroll_bar
+{
+	display: none;
+}
+
+.style-selected
+{
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	height: 34px;
+	overflow: hidden;
+	width: 100%;
+	margin: 10px 0 0 0;
+}
+
+.style-selected select
+{
+	background: transparent none repeat scroll 0 0;
+	border: 0;
+	border-radius: 0;
+	font-size: 20px;
+	height: 34px;
+	padding: 5px;
+	width: 105%;
+	-webkit-appearance:none;
+}
+
+.block_error
+{
+	color:#ff0000;
+	text-align: left;
+	margin: 4px 0;
+	padding-left: 20px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+{
+	display: none !important;
+}
